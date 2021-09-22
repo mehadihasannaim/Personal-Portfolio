@@ -1,0 +1,586 @@
+*{
+    box-sizing: border-box;
+    font-family: 'Fira Sans', sans-serif;
+}
+
+body{
+    margin: 0;
+    background-color: #EEE;
+}
+
+.navbar{
+    background-color: #0b6972;
+    /* padding: 5px; */
+    text-align: center;
+}
+
+
+
+.nav-heading{
+    color: white;
+    margin: 0;
+    padding-top: 10px;
+    
+    
+}
+
+.nav-link{
+    display: flex;
+    flex-direction: column;
+    
+}
+.nav-link a{
+    color: white;
+    background-color: #085055;
+    margin: 7px 1px;
+    padding: 14px;
+    border-radius: 6px;
+    font-size: 1.4rem;
+    text-decoration: none;
+
+}
+
+
+[class*="col-"]{
+    float: left;
+    padding: 8px;
+}
+
+/* for mobile */
+
+[class*="col-"] {
+    width: 100%;
+  }
+
+  .navbar::after{
+      content: '';
+      display: table;
+      clear: both;
+  }
+
+  .nav-link a:hover{
+      background-color: crimson;
+      transition: 0.3s;
+      
+  }
+
+  /* profile starts here */
+
+.profile .top-weather-icon img{
+    width: 120px;
+    height: 120px;
+}
+.profile .bottom-weather-icon img{
+    width: 120px;
+    height: 120px;
+}
+
+p{
+    font-size: 1.3rem;
+    text-align: center;
+}
+
+.dotted-hr{
+    border: 6px dotted white;
+    border-bottom: none;
+    margin: 20px auto;
+    width: 70px;
+}
+
+
+.top-weather-icon{
+    position: absolute;
+    right: 60px;
+    top: 20px;
+    transition: 2s;
+
+}
+
+.top-weather-icon:hover{
+    transform: rotate(360deg);
+}
+
+.profile{
+    padding: 130px 10px;
+    position: relative;
+    text-align: center;
+}
+
+.profile-desc h1{
+    font-size: 3rem;
+    font-weight: bold; font-family: 'Satisfy', cursive;
+}
+
+.profile-desc p{
+    margin: 0 auto 20px auto;  
+
+}
+
+.profile-desc p::selection{
+    color: green;
+}
+
+.bottom-weather-icon{
+    position: absolute;
+    left: 60px;
+    bottom: 10px;
+    transition: 2s;
+}
+
+.bottom-weather-icon:hover{
+    transform: rotate(360deg);
+}
+
+
+.profile::after{
+    content: '';
+    display: table;
+    clear: both;
+}
+
+ /* profile ends here */
+
+
+
+ /* About Me starts here */
+
+h2{
+    font-size: 1.5rem;
+    text-align: center;
+}
+
+.about-me{
+    background-color: #39a4ac;
+    text-align: center;
+    padding: 1% 7%;
+    color: white;
+}
+
+.about-me::after{
+    display: table;
+    content: '';
+    clear: both;
+}
+
+.aboutMeImg img{
+    height: 270px;
+    width: 200px;
+    border: 5px solid white;
+    border-radius: 50%;
+}
+
+.aboutMeImg img:hover{
+    transition: 3s;
+    transform: scale(2);
+}
+
+
+.aboutMeDesc{
+    text-align: center;
+}
+
+.codingMoto{
+    font-size: 1.5rem;
+}
+
+.aboutMeDesc p a{
+    font-weight: lighter;
+    color: white;
+    text-decoration: none;
+
+}
+
+.aboutMeDesc p a:hover{
+    text-decoration: underline;
+    color: yellow;
+}
+
+ /* About Me ends here */
+
+
+
+ 
+ /* Professional section starts here */
+
+ .professional-exp{
+     padding: 1% 0;
+ }
+
+ .professional-exp .card{
+     background-color: #a39e9e;
+     border-radius: 5px;
+     padding: 10px;
+     transition: 0.3s;
+     height: 700px;
+     box-shadow: 2px 6px 5px black;
+ }
+
+ .professional-exp .card:hover{
+        box-shadow: 0 4px 8px 5px black;
+ }
+ .professional-exp::after{
+     display: table;
+     content: '';
+     clear: both;
+ }
+
+ .card-icon{
+     text-align: center;
+   
+ }
+ .card-icon img{
+    border-radius: 50%;
+    border: 3px solid white;
+    padding: 15px;
+    margin-top: 20px;
+    width: 100px;
+ }
+
+ .card-title h2{
+     background-color: #616161;
+     padding: 10px;
+     text-align: center;
+     color: white;
+     border-radius: 4px;
+     text-transform: uppercase;
+ }
+ /* Professional section ends here */
+
+
+ /* Skills section starts here */
+.skills-container{
+    padding-right: 45px;
+}
+
+.skills-container li{
+    list-style: none;
+    font-weight: bold;
+    margin: 30px 10px;
+    position: relative;
+    text-transform: uppercase;
+}
+
+
+.skills-container li{
+    list-style: none;
+    font-weight: bold;
+    margin: 30px 10px;
+    position: relative;
+    text-transform: uppercase;
+}
+
+.skills-container li::before{
+    content: '';
+    position: absolute;
+    background-color: rgb(89, 86, 153, .5);
+    top: calc(100% + 8px);
+    width: 100%;
+    height: 10px;
+    left: 0;
+    border-radius: 1000px;
+}
+
+.skills-container li::after{
+    content: '';
+    position: absolute;
+    background-color: rgb(86, 86, 153, 1);
+    top: calc(100% + 8px);
+    width: 0%;
+    height: 10px;
+    left: 0;
+    border-radius: 1000px;
+    animation-duration: 2s;
+    animation-delay: 2s;
+    animation-timing-function: linear;
+    animation-fill-mode: forwards;
+    animation-iteration-count: infinite;
+}
+
+.skills-container li.html::after{
+    animation-name: html;
+}
+
+@keyframes html {
+
+    to{
+        width: 90%;
+        
+    }
+    
+}
+.skills-container li.css::after{
+    animation-name: css;
+}
+@keyframes css {
+
+    to{
+        width: 85%;
+
+    }
+    
+}
+
+.skills-container li.bootstrap::after{
+    animation-name: bootstrap;
+}
+@keyframes bootstrap {
+
+    to{
+        width: 70%;
+
+    }
+    
+}
+
+.skills-container li.js::after{
+    animation-name: js;
+}
+@keyframes js {
+
+    to{
+        width: 50%;
+
+    }
+    
+}
+
+.skills-container li.jquery::after{
+    animation-name: jquery;
+}
+@keyframes jquery {
+
+    to{
+        width: 56%;
+
+    }
+    
+}
+
+.skills-container li.wordpress::after{
+    animation-name: wordpress;
+}
+@keyframes wordpress {
+
+    to{
+        width: 70%;
+
+    }
+    
+}
+.skills-container li.python::after{
+    animation-name: python;
+}
+@keyframes python {
+
+    to{
+        width: 60%;
+
+    }
+    
+}
+
+.skills-container li.git::after{
+    animation-name: git;
+}
+@keyframes git {
+
+    to{
+        width: 75%;
+
+    }
+    
+}
+
+.skills-container li.java::after{
+    animation-name: java;
+}
+@keyframes java {
+
+    to{
+        width: 79%;
+
+    }
+    
+}
+
+ /* Skills section ends here */
+
+
+/* Contact section starts here */
+
+.contact-div{
+    padding: 1%;
+    background-color: #39a4ac;
+    color: white;
+}
+
+.contact-div::after{
+    display: table;
+    content: '';
+    clear: both;
+}
+
+
+.contact-me{
+    padding: 1% 7%;
+    text-align: center;
+    
+
+}
+
+.contact-me input, textarea{
+    width: 100%;
+    padding: 10px;
+    font-size: 1rem;
+    text-align: center;
+    border: none;
+    border-radius: 5px;
+    resize: none;
+
+}
+
+.contact-me button{
+    border: none;
+    border-radius: 10px;
+    background-color: #052d2f;
+    color: white;
+    padding: 15px;
+    font-size: 1.1rem;
+    margin-top: 5px;
+    margin: 10px;
+    width: 35%;
+    
+}
+.contact-me button:hover{
+    background-color: crimson;
+}
+
+
+.btn{
+    font-size: 1.6rem;
+    padding: 10px 18px;
+    border: 5px solid white;
+    background-color: white;
+    border-radius: 50%;
+    color: 	#4267B2;
+    margin: 0 4px;
+  }
+
+
+  .btn:hover{
+    transform: scale(1.1);
+    
+  }
+
+
+.more-ways-to-contact{
+
+    text-align: center;
+
+}
+
+
+
+/* Contact section ends here */
+
+
+/* Other skills starts here */
+
+.other-skills{
+    padding: 10px;
+    background-color: teal;
+    text-align: center;
+
+}
+
+.other-skills h2{
+    color: white;
+}
+
+.other-skills::after{
+    display: table;
+    clear: both;
+    content: '';
+}
+
+
+.other-skills ul li{
+    color: white;
+    margin-top: 10px;
+    font-size: 1.4rem;
+    font-family: 'Times New Roman', Times, serif;
+    text-align: left;
+    list-style-type: none;
+}
+
+
+
+
+/* Other skills ends here */
+
+
+/* Footer section starts here */
+
+.footer{
+    background-color: black;
+    color: white;
+    padding: 20px;
+    text-align: center;
+    font-size: 1.2rem;
+    
+}
+
+.footer-menu a{
+    color: white;
+    display: block;
+    margin: 15px 0;
+    text-decoration: none;
+    font-weight: lighter;
+
+}
+
+.footer-menu a:hover{
+    color: gray;
+    font-size: 1.3rem;
+}
+
+.footer::after{
+    display: table;
+    content: '';
+    clear: both;
+}
+
+.footer span{
+    color: red;
+    font-size: 1.5rem;
+    font-family: 'Times New Roman', Times, serif;
+}
+
+.footer-desc{
+    font-family: 'Times New Roman', Times, serif;
+}
+
+.footer-menu a{
+    font-family: 'Times New Roman', Times, serif;
+}
+
+
+/* Footer section ends here */
+
+
+/* Top section starts here */
+
+/* .top p a{
+    font-size: 1.5rem;
+    text-decoration: none;
+    font-weight: bold;
+    font-family: 'Times New Roman', Times, serif;
+}
+
+.top p a:hover{
+    font-size: 1.8rem;
+    color: crimson;
+} */
+
+
+/* Top section starts here */
